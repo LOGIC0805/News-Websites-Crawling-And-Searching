@@ -96,7 +96,7 @@ function crawler() {
             }
             // 检验新闻网页url是否符合url命名格式
             var news_reg = /\/news\/article\/([a-zA-Z0-9]{16}).html/;
-            var news_reg_special = /\/news\/article\/([a-zA-Z0-9]{8})0001982T.html/
+            var news_reg_special = /\/news\/article\/([a-zA-Z0-9]{8})0001982T.html/;
             // 如：https://www.163.com/news/article/G8HQOAKE0001899O.html
             if (!news_reg.test(news_url) || news_reg_special.test(news_url)) {
                 console.log('新闻链接不符合格式！');

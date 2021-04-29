@@ -23,7 +23,6 @@ var crawler_url = 'https://news.sina.com.cn/';
 crawler();
 
 function crawler() {
-    var crawler_url = 'https://news.sina.com.cn/';
     request(crawler_url, function(err, res, body) {
         // 网页解析
         try {

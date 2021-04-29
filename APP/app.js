@@ -22,8 +22,6 @@ var search_info_past = "";
 var search_type_past = "";
 
 app.get('/search_news', function(req, res) {
-    // 设置res编码为utf-8
-    // res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' });
     // 查询数据库
     var search_type = req.query.search_type;
     var search_info = req.query.search_info;
