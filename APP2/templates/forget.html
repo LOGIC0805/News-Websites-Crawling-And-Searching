@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <title>忘记密码</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/html5media.min.js"></script>
+    <script text="text/javascript">
+        function forget(obj){
+            var phonenum = $(obj).parent().prev().prev().prev().prev().children("#phonenum").val();
+            var username = $(obj).parent().prev().prev().prev().children("#username").val();
+            var password = $(obj).parent().prev().prev().children("#password").val();
+            var password1 = $(obj).parent().prev().children("#password1").val();
+            if (phonenum == "" || username == "" || password == ""){
+                alert("请输出完整账号信息！");
+            } else if(password != password1) {
+                alert("两次密码输入不一致！");
+            } else {
+                var url = "/change_password";
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    data: {
+                        phonenum: phonenum,
+                        username: username,
+                        password: password
+                    },
+                    success: function(data){
+                        alert(data.msg);
+                        if (data.code == 1) {
+                            window.location = "/login.html";
+                        } else {
+                            window.location = "/forget.html";
+                        }
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                        window.location = "/forget.html";
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="background">
+        <video autoplay loop muted>
+            <source src="/video/video.mp4" type="video/mp4"  />
+            Your Browser is no longer supported.
+        </video>
+    </div>
+
+    <div class="login">
+        <div class="logo_1"></div>
+        <div class="form-item">
+            <p style="padding-bottom:15px"><input id="phonenum" oninput="value=value.replace(/[^\d]/g,'')" autocomplete="off" placeholder="手机号码" name="phonenum"></p>
+            <p style="padding-bottom:30px"><input id="username" sautocomplete="off" placeholder="用户名" name="username"></p>
+            <p style="padding-bottom:15px"><input id="password" type="password" autocomplete="off" placeholder="登录密码" name="password"></p>
+            <p style="padding-bottom:15px"><input id="password1" type="password" autocomplete="off" placeholder="确认登录密码" name="password1"></p>
+            <p><input type="submit" id="forget" value="修改密码" onclick="forget(this)" style="padding-left:0;margin-left:0;width:350px;background-color:white;color:#1f6f4a;cursor:pointer"></p>
+        </div>
+    </div>
+
+</body>
+</html>
