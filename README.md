@@ -20,6 +20,8 @@ Node.js实现网络新闻爬虫及搜索功能（二）：https://blog.csdn.net/
 Node.js实现网络新闻爬虫及搜索功能（三）：https://blog.csdn.net/WORLDLOGIC/article/details/116283320?spm=1001.2014.3001.5502  
 Node.js实现网络新闻爬虫及搜索功能（四）：https://blog.csdn.net/WORLDLOGIC/article/details/116283659?spm=1001.2014.3001.5502  
 Node.js实现网络新闻爬虫及搜索功能（五）：https://blog.csdn.net/WORLDLOGIC/article/details/116284623?spm=1001.2014.3001.5502  
+Node.js实现网络新闻爬虫及搜索增加功能（一）：用户功能：https://blog.csdn.net/WORLDLOGIC/article/details/118345009?spm=1001.2014.3001.5501  
+Node.js实现网络新闻爬虫及搜索增加功能（二）：可视化及查询优化：https://blog.csdn.net/WORLDLOGIC/article/details/118346093?spm=1001.2014.3001.5501  
 
 bilibili demo地址：  
 https://www.bilibili.com/video/BV1jZ4y1F7RV  
